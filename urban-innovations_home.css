@@ -20,7 +20,8 @@ body
 	background-color: #000;
 	padding: 0px;
 	position: relative;
-	height: 880px;
+min-height: 880px;
+	height: auto;
 	width: 1024px;
 	margin: 0px auto;
 }
@@ -39,7 +40,8 @@ body
 	background-image: url(images/bkgd_ctr_mn.png);
 	background-repeat: no-repeat;
 	padding: 0px;
-	height: 323px;
+min-height: 323px;
+	height: auto;
 	width: 1024px;
 	margin-top: 0px;
 	margin-right: auto;

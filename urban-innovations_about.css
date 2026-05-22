@@ -21,7 +21,8 @@ body
 	background-color: #000;
 	padding: 0px;
 	position: relative;
-	height: 1077px;
+	min-height: 1077px;
+	height: auto;
 	width: 1024px;
 	margin: 0px auto;
 }
@@ -42,13 +43,16 @@ body
 	background-image: url(images/bkgd_main_ab.png);
 	background-repeat: no-repeat;
 	padding: 0px;
-	height: 520px;
+	min-height: 520px;
+	height: auto;
 	width: 1024px;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
 	position: relative;
+	overflow: visible;
+	padding-bottom: 40px;
 }
 #footer {
 	background-color: #000;

@@ -20,7 +20,8 @@ body
 	background-color: #000;
 	padding: 0px;
 	position: relative;
-	height: 1207px;
+min-height: 1207px;
+	height: auto;
 	width: 1024px;
 	margin-top: 0px;
 	margin-right: auto;
@@ -42,7 +43,8 @@ body
 	background-image: url(images/bkgd_main_rnt.png);
 	background-repeat: no-repeat;
 	padding: 0px;
-	height: 650px;
+min-height: 650px;
+	height: auto;
 	width: 1024px;
 	margin-top: 0px;
 	margin-right: auto;

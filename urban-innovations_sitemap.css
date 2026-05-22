@@ -17,7 +17,8 @@ body{
 	background-color: #000;
 	padding: 0px;
 	position: relative;
-	height: 798px;
+min-height: 798px;
+	height: auto;
 	width: 1024px;
 	margin: 0px auto;
 }
@@ -36,7 +37,8 @@ body{
 	background-image: url(images/bkgd_ctr_ste.png);
 	background-repeat: no-repeat;
 	padding: 0px;
-	height: 355px;
+min-height: 355px;
+	height: auto;
 	width: 1024px;
 	margin-top: 0px;
 	margin-right: auto;
