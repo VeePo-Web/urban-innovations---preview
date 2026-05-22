@@ -19,9 +19,58 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="cycle.js"></script>
 <script type="text/javascript" src="slideshow.js"></script>
+<style>
+#ui-gate{position:fixed;inset:0;z-index:99999;background:#111;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:Georgia,serif}
+#ui-gate.hidden{display:none}
+#ui-gate-box{background:#1a1a1a;border:1px solid #aa710a;padding:48px 40px 40px;width:340px;text-align:center;box-shadow:0 0 60px rgba(0,0,0,.8)}
+#ui-gate-logo{color:#aa710a;font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+#ui-gate-title{color:#fff;font-size:20px;margin:0 0 6px;font-weight:normal;letter-spacing:1px}
+#ui-gate-sub{color:#888;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px}
+#ui-gate-divider{width:40px;height:1px;background:#aa710a;margin:0 auto 32px}
+#ui-gate input{width:100%;box-sizing:border-box;background:#111;border:1px solid #333;color:#fff;padding:12px 14px;font-size:14px;letter-spacing:1px;outline:none;margin-bottom:10px;font-family:Georgia,serif}
+#ui-gate input:focus{border-color:#aa710a}
+#ui-gate button{width:100%;background:#aa710a;color:#fff;border:none;padding:13px;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-family:Georgia,serif;margin-top:4px}
+#ui-gate button:hover{background:#c08830}
+#ui-gate-error{color:#c0392b;font-size:12px;letter-spacing:1px;margin-top:10px;min-height:18px}
+#ui-gate-footer{color:#444;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:28px}
+</style>
 </head>
 
 <body onload="MM_preloadImages('images/home_act13.png','images/about_act13.png','images/about_opn13.png','images/about_ovr13.png','images/rent_act13.png','images/rent_opn13.png','images/rent_ovr13.png','images/conct_act13.png','images/conct_opn13.png','images/conct_ovr13.png')">
+
+<div id="ui-gate">
+  <div id="ui-gate-box">
+    <div id="ui-gate-logo">Urban Innovations</div>
+    <h2 id="ui-gate-title">Preview Access</h2>
+    <div id="ui-gate-divider"></div>
+    <div id="ui-gate-sub">Enter password to continue</div>
+    <input type="password" id="ui-gate-pw" placeholder="Password" autocomplete="off" />
+    <button onclick="uiGateCheck()">Enter Site</button>
+    <div id="ui-gate-error"></div>
+  </div>
+  <div id="ui-gate-footer">Confidential Preview &mdash; Not for Distribution</div>
+</div>
+<script type="text/javascript">
+(function(){
+  if(sessionStorage.getItem('ui_preview_auth')==='1'){
+    document.getElementById('ui-gate').className='hidden';
+  }
+  document.getElementById('ui-gate-pw').addEventListener('keydown',function(e){
+    if(e.key==='Enter') uiGateCheck();
+  });
+})();
+function uiGateCheck(){
+  var pw=document.getElementById('ui-gate-pw').value;
+  if(pw==='Urban-Innovations.comIsC0ol'){
+    sessionStorage.setItem('ui_preview_auth','1');
+    document.getElementById('ui-gate').className='hidden';
+  } else {
+    document.getElementById('ui-gate-error').textContent='Incorrect password. Please try again.';
+    document.getElementById('ui-gate-pw').value='';
+    document.getElementById('ui-gate-pw').focus();
+  }
+}
+</script>
 
 <div id="wrapper">
 <!-- Header Content -->
