@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* CSS Document - urban-innovations_pop3 */
+
+/* ZERO OUT */
+html, body, h1, h2, h3, h4, h5, h6, p
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* MULCH POP */
+body {
+	background-color: #fff;
+	margin: 0px;
+	padding: 0px;
+}
+#tipswrapper {
+	padding: 0px;
+	position: relative;
+	height: 465px;
+	width: 538px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	border: 6px solid #CCC;
+}
+#tipsbanner {
+	margin: 0px;
+	padding: 0px;
+	height: 68px;
+	width: 85px;
+	position: absolute;
+	z-index: 20;
+	left: 13px;
+	top: 10px;
+	background-image: url(images/tips_banner.png);
+}
+#tips_txtbx {
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	height: 370px;
+	width: 410px;
+	position: absolute;
+	top: 40px;
+	left: 105px;
+	z-index: 10;
+}
+.cntnt_blk {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 10px;
+}
+.cntnt_gry {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 10px;
+}
+.cntnt_brn {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #663300;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 10px;
+}
+.tips_list {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 5px;
+}
+#tipsclose {
+	margin: 0px;
+	padding: 0px;
+	height: 17px;
+	width: 60px;
+	position: absolute;
+	left: 460px;
+	top: 420px;
+	z-index: 30;
+}
+#tipsbars {
+	margin: 0px;
+	padding: 0px;
+	height: 13px;
+	width: 433px;
+	position: absolute;
+	left: 105px;
+	top: 442px;
+	background-image: url(images/tips_bars.png);
+}
+.tipshead1 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	color: #663300;
+	text-decoration: none;
+	text-align: left;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.tipshead2 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	color: #666;
+	text-decoration: none;
+	text-align: left;
+	margin-bottom: 10px;
+}

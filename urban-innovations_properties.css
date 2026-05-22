@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* CSS Document - Urban innovations: Rental Properties */
+
+
+/* BODY */
+body
+	{
+	background-color: #000;
+	background-image: url(images/urban_innovations_body1008.jpg);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-position: 50% 0px;
+	padding: 0px;
+	}
+
+/* BACKGROUND */
+#prop_wrapper {
+	background-color: #000;
+	padding: 0px;
+	position: relative;
+	height: 1008px;
+	width: 1024px;
+	margin: 0px auto;
+}
+#ab_header {
+	background-color: #000;
+	background-image: url(images/bkgd_top_ab.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 337px;
+	width: 1024px;
+	margin: 0px auto;
+	position: relative;
+}
+#prop_main {
+	background-color: #000;
+	background-image: url(images/bkgd_ctr_prop.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 578px;
+	width: 1024px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	position: relative;
+}
+#prop_footer {
+	background-color: #000;
+	background-image: url(images/bkgd_btm_prop.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 93px;
+	width: 1024px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	position: relative;
+}
+
+/* HEADER */
+#logo_rnt {
+	margin: 0px;
+	padding: 0px;
+	height: 108px;
+	width: 294px;
+	position: absolute;
+	left: 87px;
+	top: 0px;
+	z-index: 30;
+	background-image: url(images/rnt_logo.png);
+	background-repeat: no-repeat;
+}
+
+/* MAIN */
+#prop_txtbox {
+	margin: 0px;
+	padding: 0px;
+	height: 270px;
+	width: 248px;
+	position: absolute;
+	left: 120px;
+	top: 30px;
+	list-style-type: none;
+}
+.features {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	list-style-position: inside;
+	list-style-type: square;
+}
+.subfeatures {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 17px;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	padding: 0px;
+	list-style-type: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 11px;
+}
+.subsubfeat {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	padding: 0px;
+	list-style-position: inside;
+	list-style-type: disc;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+}
+.subsubsub {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	padding: 0px;
+	list-style-type: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 31px;
+}
+#prop_iconbox {
+	margin: 0px;
+	padding: 0px;
+	height: 70px;
+	width: 98px;
+	position: absolute;
+	left: 146px;
+	top: 188px;
+}
+#prop_hdngbox {
+	margin: 0px;
+	padding: 0px;
+	height: 22px;
+	width: 300px;
+	position: absolute;
+	left: 400px;
+	top: 53px;
+	list-style-type: none;
+}
+#prop_streetv {
+	margin: 0px;
+	padding: 0px;
+	height: 45px;
+	width: 141px;
+	position: absolute;
+	left: 759px;
+	top: 32px;
+	list-style-type: none;
+}
+#googlemap_box {
+	margin: 0px;
+	padding: 0px;
+	height: 360px;
+	width: 500px;
+	position: absolute;
+	left: 400px;
+	top: 80px;
+	overflow: hidden;
+}
+#googlemap_box iframe {
+	width: 500px;
+	height: 360px;
+	border: 0;
+	display: block;
+}
+
+/* -- navigation box elements -- */
+#prop_navhdng {
+	margin: 0px;
+	padding: 0px;
+	height: 18px;
+	width: 220px;
+	position: absolute;
+	left: 120px;
+	top: 305px;
+}
+#prop_navlist {
+	margin: 0px;
+	padding: 0px;
+	height: 104px;
+	width: 150px;
+	position: absolute;
+	left: 103px;
+	top: 335px;
+}
+#prop_navlist a {
+	transition: color 0.15s ease-out;
+}
+#prop_navlist a:link {
+	text-decoration: none;
+	color: #000;
+}
+#prop_navlist a:visited {
+	text-decoration: none;
+	color: #000;
+}
+#prop_navlist a:hover {
+	text-decoration: none;
+	color: #aa710a;
+}
+#prop_navlist a:active {
+	text-decoration: none;
+	color: #000;
+}
+#prop_nxtbtns {
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 78px;
+	position: absolute;
+	left: 255px;
+	top: 335px;
+}
+#prop_prvbtns {
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 78px;
+	position: absolute;
+	left: 255px;
+	top: 372px;
+}
+#prop_bkbtns {
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 112px;
+	position: absolute;
+	left: 255px;
+	top: 409px;
+}
+.navlist {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	list-style-type: none;
+}
+.navblue {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #00569a;
+	text-decoration: none;
+	text-align: left;
+	letter-spacing: 0.3px;
+}
+/* -- END -- navigation box elements -- */
+
+#prop_appbox {
+	height: 65px;
+	width: 289px;
+	position: absolute;
+	left: 87px;
+	top: 467px;
+}
+
+/* -- contact box elements -- */
+#prop_cntctbx {
+	margin: 0px;
+	padding: 0px;
+	height: 55px;
+	width: 239px;
+	position: absolute;
+	left: 618px;
+	top: 469px;
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	color: #888;
+	text-decoration: none;
+	text-align: left;
+}
+#prop_cntctbx a {
+	transition: color 0.15s ease-out;
+}
+#prop_cntctbx a:link {
+	text-decoration: none;
+	color: #888;
+}
+#prop_cntctbx a:visited {
+	text-decoration: none;
+	color: #888;
+}
+#prop_cntctbx a:hover {
+	text-decoration: underline;
+	color: #aa710a;
+}
+#prop_cntctbx a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+#prop_cntctrovr {
+	margin: 0px;
+	padding: 0px;
+	height: 42px;
+	width: 52px;
+	position: absolute;
+	left: 875px;
+	top: 479px;
+}
+/* -- END of contact box elements -- */
+
+/* FOOTER */
+#prop_ftrbar {
+	text-align: left;
+	height: 60px;
+	width: 633px;
+	position: absolute;
+	left: 87px;
+	margin: 0px;
+	padding-top: 2px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#prop_ftrbar a:link {
+	text-decoration: none;
+	color: #aaa;
+}
+#prop_ftrbar a:visited {
+	text-decoration: none;
+	color: #666;
+}
+#prop_ftrbar a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+#prop_ftrbar a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+#prop_cyrght {
+	margin: 0px;
+	padding: 0px;
+	height: 28px;
+	width: 154px;
+	position: absolute;
+	left: 775px;
+	top: 15px;
+}

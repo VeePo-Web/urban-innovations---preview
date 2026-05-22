@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* CSS Document - urban-innovations_pop1 */
+
+/* ZERO OUT */
+html, body, h1, h2, h3, h4, h5, h6, p
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* GREEN POP */
+body {
+	background-color: #005b9a;
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	color: #fff;
+	margin: 0px;
+	padding: 0px;
+}
+#appwrapper {
+	position: relative;
+	height: 844px;
+	width: 612px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding: 0px;
+}
+#app_txtbx {
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	height: 72px;
+	width: 612px;
+	position: absolute;
+	top: 772px;
+	left: 0px;
+	z-index: 10;
+}
+#appclose {
+	margin: 0px;
+	padding: 0px;
+	height: 17px;
+	width: 60px;
+	position: absolute;
+	left: 525px;
+	top: 800px;
+	z-index: 30;
+}
+#appreader {
+	margin: 0px;
+	padding: 0px;
+	height: 33px;
+	width: 112px;
+	position: absolute;
+	left: 20px;
+	top: 800px;
+	z-index: 30;
+}
+#appdwnld {
+	margin: 0px;
+	padding: 0px;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	left: 210px;
+	top: 800px;
+	z-index: 30;
+}
+#dwnldmssg {
+	margin: 0px;
+	padding: 0px;
+	height: 15px;
+	width: 160px;
+	position: absolute;
+	left: 250px;
+	top: 810px;
+	z-index: 30;
+}

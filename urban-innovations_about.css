@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* CSS Document - Urban Innovations About */
+
+
+/* BODY */
+body
+	{
+	background-color: #000;
+	background-image: url(images/urban_innovations_body880.jpg);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-position: 50% 0px;
+	padding: 0px;
+	}
+	
+/* BACKGROUND */
+#wrapper {
+	background-color: #000;
+	padding: 0px;
+	position: relative;
+	height: 1077px;
+	width: 1024px;
+	margin: 0px auto;
+}
+
+#header {
+	background-color: #000;
+	background-image: url(images/bkgd_top_ab.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 337px;
+	width: 1024px;
+	margin: 0px auto;
+	position: relative;
+}
+
+#main {
+	background-color: #000;
+	background-image: url(images/bkgd_main_ab.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 520px;
+	width: 1024px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	position: relative;
+}
+#footer {
+	background-color: #000;
+	background-image: url(images/bkgd_btm_mn.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 220px;
+	width: 1024px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	position: relative;
+}
+
+/* HEADER */
+#logo_ab {
+	margin: 0px;
+	padding: 0px;
+	height: 108px;
+	width: 294px;
+	position: absolute;
+	left: 87px;
+	top: 0px;
+	z-index: 30;
+	background-image: url(images/ab_logo.png);
+	background-repeat: no-repeat;
+}
+
+#image_main {
+	background-image: url(images/ab_mnimg.jpg);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 566px;
+	position: absolute;
+	z-index: 10;
+	left: 87px;
+	top: 80px;
+}
+
+#ab_imgroll {
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 284px;
+	position: absolute;
+	left: 653px;
+	top: 80px;
+}
+
+/* MAIN */
+#randy_hdng {
+	background-image: url(images/ab_randy.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 13px;
+	width: 150px;
+	position: absolute;
+	left: 120px;
+	top: 43px;
+	z-index: 20;
+}
+
+#red_box {
+	height: auto;
+	min-height: 180px;
+}
+#wide_box {
+	margin: 0px;
+	padding: 0px;
+	width: 510px;
+	position: absolute;
+	z-index: 10;
+	left: 398px;
+	top: 65px;
+}
+
+#ab_hdng {
+	background-image: url(images/ab_heading.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 546px;
+	position: absolute;
+	left: 378px;
+	top: 43px;
+	z-index: 20;
+}
+
+/* FOOTER */
+#green {
+	height: 65px;
+	width: 321px;
+	position: absolute;
+	left: 87px;
+	top: 16px;
+}
+
+#cntctbx {
+	background-image: url(images/cntctbx.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	height: 45px;
+	width: 239px;
+	position: absolute;
+	left: 618px;
+	top: 25px;
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	color: #999;
+	text-decoration: none;
+	text-align: left;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+}
+
+#cntctrovr {
+	margin: 0px;
+	padding: 0px;
+	height: 42px;
+	width: 52px;
+	position: absolute;
+	left: 875px;
+	top: 25px;
+}
+
+/* FONT CLASSES */
+.abtxt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #aa710a;
+	text-decoration: none;
+	text-align: left;
+	margin: 14px 0 6px 0;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+

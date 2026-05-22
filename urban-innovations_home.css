@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/* CSS Document - Urban Innovations Home */
+
+/* BODY */
+body
+	{
+	background-color: #000;
+	background-image: url(images/urban_innovations_body880.jpg);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-position: 50% 0px;
+	padding: 0px;
+	}
+	
+/* BACKGROUND */
+#wrapper {
+	background-color: #000;
+	padding: 0px;
+	position: relative;
+	height: 880px;
+	width: 1024px;
+	margin: 0px auto;
+}
+#header {
+	background-color: #000;
+	background-image: url(images/bkgd_top_mn.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 337px;
+	width: 1024px;
+	margin: 0px auto;
+	position: relative;
+}
+#main {
+	background-color: #000;
+	background-image: url(images/bkgd_ctr_mn.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 323px;
+	width: 1024px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	position: relative;
+}
+#footer {
+	background-color: #000;
+	background-image: url(images/bkgd_btm_mn.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	height: 220px;
+	width: 1024px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	position: relative;
+}
+
+/* HEADER */
+#logo_main {
+	margin: 0px;
+	padding: 0px;
+	height: 108px;
+	width: 294px;
+	position: absolute;
+	left: 87px;
+	top: 0px;
+	z-index: 30;
+	background-image: url(images/mn_logo.png);
+	background-repeat: no-repeat;
+}
+#image_main {
+	background-image: url(images/mn_mnimg.jpg);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 566px;
+	position: absolute;
+	z-index: 10;
+	left: 87px;
+	top: 80px;
+}
+#welcome {
+	height: 52px;
+	width: 294px;
+	position: absolute;
+	left: 87px;
+	top: 258px;
+	z-index: 30;
+}
+#main_imgroll {
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 284px;
+	position: absolute;
+	left: 653px;
+	top: 80px;
+}
+
+/* MAIN — two-column 50/50 layout, 300px boxes with equal 83px gaps */
+#red_box {
+	left: 170px;
+	width: 300px;
+}
+#red_hdng {
+	background-image: url(images/mn_heading1.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 268px;
+	position: absolute;
+	left: 150px;
+	top: 43px;
+	z-index: 20;
+}
+#red_icon {
+	margin: 0px;
+	padding: 0px;
+	height: 115px;
+	width: 187px;
+	position: absolute;
+	z-index: 20;
+	left: 223px;
+	top: 193px;
+}
+#rnt_box {
+	height: 265px;
+	width: 300px;
+	position: absolute;
+	left: 553px;
+	top: 43px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10;
+}
+#rnt_hdng {
+	background-image: url(images/mn_heading2.png);
+	margin: 0px;
+	padding: 0px;
+	height: 30px;
+	width: 268px;
+	position: absolute;
+	left: 533px;
+	top: 43px;
+	z-index: 20;
+}
+#rnt_icon {
+	margin: 0px;
+	padding: 0px;
+	height: 120px;
+	width: 123px;
+	position: absolute;
+	z-index: 20;
+	left: 670px;
+	top: 188px;
+}
+/* FOOTER */
+#cntctbx {
+	background-image: url(images/cntctbx.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	height: 45px;
+	width: 239px;
+	position: absolute;
+	left: 618px;
+	top: 25px;
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	color: #999;
+	text-decoration: none;
+	text-align: left;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+}
+#cntctrovr {
+	margin: 0px;
+	padding: 0px;
+	height: 42px;
+	width: 52px;
+	position: absolute;
+	left: 875px;
+	top: 25px;
+}
+
+/* FONT Classes */
+.redtxt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #aa710a;
+	text-decoration: none;
+	text-align: left;
+	margin: 20px 0 0 0;
+}
+.rnttxt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #00569a;
+	text-decoration: none;
+	text-align: left;
+	margin: 20px 0 0 0;
+}
+

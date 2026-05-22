@@ -1,0 +1,8 @@
+node_modules/
+aspnet_client/
+cgi-bin/
+images-backup-originals/
+*.zip
+build_report.js
+generate-pdf.js
+remove-fax.js

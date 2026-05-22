@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/* CSS Document - urban-innovations_global */
+
+/* ZERO OUT */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, pre, code, address, variable, form, fieldset, blockquote
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+#header  
+	{
+	font-weight: normal;
+	text-align: left;
+}
+img, fieldset
+	{
+	border: 0;
+}
+ol
+	{
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul
+	{
+	padding-left: 1.4em;
+	list-style: square;
+}
+
+/* BODY */
+html
+	{
+	overflow:auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	}
+h1 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 26px;
+	padding: 0px;
+	margin-top: 5px;
+	color: #444;
+	margin-left: 5px;
+	letter-spacing: -0.5px;
+}
+h2 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	color: #FFF;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: 0.5px;
+}
+
+/* HEADER */
+#logo_frame {
+	background-color: #444;
+	margin: 0px;
+	padding: 0px;
+	height: 108px;
+	width: 294px;
+	position: absolute;
+	z-index: 20;
+	left: 87px;
+	top: 0px;
+}
+#navbar {
+	margin: 0px;
+	padding: 0px;
+	height: 26px;
+	width: 514px;
+	position: absolute;
+	left: 424px;
+	top: 47px;
+}
+#image_box {
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 566px;
+	position: absolute;
+	z-index: 10;
+	left: 87px;
+	top: 80px;
+}
+#image_scnd {
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 284px;
+	position: absolute;
+	left: 653px;
+	top: 80px;
+}
+
+/* MAIN */
+#red_box {
+	height: 265px;
+	width: 240px;
+	position: absolute;
+	left: 120px;
+	top: 43px;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10;
+}
+
+/* FOOTER */
+#footerbar {
+	text-align: left;
+	height: 60px;
+	width: 633px;
+	position: absolute;
+	left: 87px;
+	top: 100px;
+	margin: 0px;
+	padding-top: 30px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#copyright {
+	margin: 0px;
+	padding: 0px;
+	height: 28px;
+	width: 154px;
+	position: absolute;
+	left: 775px;
+	top: 143px;
+}
+/*-- Footer Links */
+#footer a:link {
+	text-decoration: none;
+	color: #aaa;
+	transition: color 0.15s ease-out;
+}
+#footer a:visited {
+	text-decoration: none;
+	color: #888;
+}
+#footer a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+#footer a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+/*-- Footer Nav */
+.footul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.footli {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #CCC;
+	text-decoration: none;
+	text-align: left;
+	display: inline;
+	letter-spacing: 0.5px;
+}
+.footslsh {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #666;
+	text-decoration: none;
+	text-align: left;
+	display: inline;
+}
+
+/* FONT Classes */
+.cntnt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.cxtxt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 8px;
+}
+.randytxt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #aa710a;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.mixdhead1 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #00569a;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+.mixdhead2 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 5px;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.mixdhead3 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	color: #aa710a;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 5px;
+	font-weight: bold;
+}
+.mixdhead4 {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	color: #aa710a;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 5px;
+}
+.divtxt {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 11px;
+	line-height: 15px;
+	font-weight: normal;
+	color: #999;
+	text-decoration: none;
+	text-align: left;
+	padding-top: 30px;
+}
+
+/* Image link hover — subtle opacity fade before JS rollover fires */
+a img {
+	transition: opacity 0.12s ease-out;
+}
+a:hover img {
+	opacity: 0.88;
+}
+
+/* Focus ring — brand gold, visible for keyboard navigation */
+a:focus {
+	outline: 2px solid #aa710a;
+	outline-offset: 2px;
+}
+
+/* Main content links — brand gold */
+#main a:link    { color: #aa710a; text-decoration: none; }
+#main a:visited { color: #aa710a; opacity: 0.8; }
+#main a:hover   { color: #aa710a; text-decoration: underline; }
+
+/* Text selection — brand gold */
+::selection      { background-color: #aa710a; color: #fff; }
+::-moz-selection { background-color: #aa710a; color: #fff; }

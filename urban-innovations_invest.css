@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document - urban-innovations_pop2 */
+
+/* ZERO OUT */
+html, body, h1, h2, h3, h4, h5, h6, p
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* INVEST POP */
+body {
+	background-color: #7399C6;
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	color: #7399C6;
+	margin: 0px;
+	padding: 0px;
+}
+#investwrapper {
+	padding: 0px;
+	position: relative;
+	height: 286px;
+	width: 500px;
+	margin: 0px auto;
+}
+#invest_banner {
+	margin: 0px;
+	padding: 0px;
+	height: 70px;
+	width: 260px;
+	position: absolute;
+	z-index: 20;
+	left: 36px;
+	top: 12px;
+	background-image: url(images/inv_banner.png);
+}
+#invest_txtbx {
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	height: 180px;
+	width: 364px;
+	position: absolute;
+	top: 58px;
+	left: 96px;
+	z-index: 10;
+}
+
+#investclose {
+	margin: 0px;
+	padding: 0px;
+	height: 17px;
+	width: 60px;
+	position: absolute;
+	left: 430px;
+	top: 230px;
+	z-index: 30;
+}
+#investbars {
+	margin: 0px;
+	padding: 0px;
+	height: 23px;
+	width: 404px;
+	position: absolute;
+	left: 96px;
+	top: 253px;
+	background-image: url(images/inv_bars.png);
+}
+.invest_wht {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 10px;
+}
+.invest_blue {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: #002137;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 10px;
+}

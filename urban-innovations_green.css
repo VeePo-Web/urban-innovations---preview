@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* CSS Document - urban-innovations_pop1 */
+
+/* ZERO OUT */
+html, body, h1, h2, h3, h4, h5, h6, p
+	{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* GREEN POP */
+body {
+	background-color: #006838;
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	color: #006838;
+	margin: 0px;
+	padding: 0px;
+}
+#greenwrapper {
+	padding: 0px;
+	position: relative;
+	height: 380px;
+	width: 520px;
+	margin: 0px auto;
+}
+#green_banner {
+	margin: 0px;
+	padding: 0px;
+	height: 60px;
+	width: 335px;
+	position: absolute;
+	z-index: 20;
+	left: 23px;
+	top: 14px;
+	background-image: url(images/grn_banner.png);
+}
+#green_txtbx {
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	height: 280px;
+	width: 400px;
+	position: absolute;
+	top: 58px;
+	left: 96px;
+	z-index: 10;
+}
+.cntnt_gr {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #b4db91;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 5px;
+}
+.cntnt_wht {
+	font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: normal;
+	color: #fff;
+	text-decoration: none;
+	text-align: left;
+	margin-top: 10px;
+}
+#greenclose {
+	margin: 0px;
+	padding: 0px;
+	height: 17px;
+	width: 60px;
+	position: absolute;
+	left: 450px;
+	top: 330px;
+	z-index: 30;
+}
+#greenbars {
+	margin: 0px;
+	padding: 0px;
+	height: 15px;
+	width: 424px;
+	position: absolute;
+	left: 96px;
+	top: 355px;
+	background-image: url(images/grn_bars.png);
+}
