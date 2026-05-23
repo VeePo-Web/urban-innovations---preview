@@ -1,53 +1,185 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Urban Innovations — Preview</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%;background:#111;font-family:Georgia,serif}
-body{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:100vh}
-.box{background:#1a1a1a;border:1px solid #aa710a;padding:48px 40px 40px;width:340px;text-align:center;box-shadow:0 0 60px rgba(0,0,0,.8)}
-.brand{color:#aa710a;font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:8px}
-h1{color:#ffffff;font-size:20px;font-weight:normal;letter-spacing:1px;margin-bottom:28px}
-.line{width:40px;height:1px;background:#aa710a;margin:0 auto 24px}
-.label{color:#777;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-input{width:100%;background:#111;border:1px solid #333;color:#fff;padding:13px 14px;font-size:14px;letter-spacing:1px;outline:none;font-family:Georgia,serif;display:block;margin-bottom:12px}
-input:focus{border-color:#aa710a}
-button{width:100%;background:#aa710a;color:#fff;border:none;padding:14px;font-size:12px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-family:Georgia,serif}
-button:hover{background:#c08830}
-.error{color:#e74c3c;font-size:12px;letter-spacing:1px;margin-top:12px;min-height:16px}
-.footer{color:#333;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:32px}
+<title>Urban Innovations</title>
+<script type="text/javascript">
+if(localStorage.getItem('ui_auth')!=='1'){document.documentElement.style.visibility='hidden';}
+</script>
+<style type="text/css">
+#_gate{position:fixed;top:0;left:0;width:100%;height:100%;background:#111111;z-index:999999;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:Georgia,serif;visibility:visible!important}
+#_gate_box{background:#1a1a1a;border:1px solid #aa710a;padding:50px 44px 42px;width:320px;text-align:center}
+#_gate_brand{color:#aa710a;font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:6px}
+#_gate_line{width:36px;height:1px;background:#aa710a;margin:14px auto 22px}
+#_gate_title{color:#ffffff;font-size:18px;font-weight:normal;letter-spacing:1px;margin:0 0 20px}
+#_gate_label{color:#666;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+#_gate_pw{width:100%;background:#0d0d0d;border:1px solid #2a2a2a;color:#fff;padding:12px 14px;font-size:13px;font-family:Georgia,serif;box-sizing:border-box;outline:none;display:block;margin-bottom:10px}
+#_gate_pw:focus{border-color:#aa710a}
+#_gate_btn{width:100%;background:#aa710a;color:#fff;border:none;padding:13px;font-size:11px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-family:Georgia,serif;display:block}
+#_gate_btn:hover{background:#bf8520}
+#_gate_err{color:#cc3333;font-size:11px;letter-spacing:1px;margin-top:11px;min-height:16px}
+#_gate_foot{color:#2a2a2a;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:28px}
 </style>
-</head>
-<body>
-<div class="box">
-  <div class="brand">Urban Innovations</div>
-  <div class="line"></div>
-  <h1>Preview Access</h1>
-  <div class="label">Enter password to continue</div>
-  <input type="password" id="pw" placeholder="Password" autocomplete="off" />
-  <button onclick="check()">Enter Site</button>
-  <div class="error" id="err"></div>
-</div>
-<div class="footer">Confidential Preview &mdash; Not for Distribution</div>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="Urban Innovations, Randy Steinwand, Calgary Alberta, Calgary real estate redevelopment, Calgary apartment rental, Calgary home rental, Calgary rental properties, Calgary commercial space, Calgary commercial lease" />
+		<meta name="description" content="Urban Innovations focuses on real estate investing in multi-family and commercial units, and redevelopment projects in Calgary’s vibrant inner city." />
+		<meta name="copyright" content="Copyright 2011 - Urban Innovations" />
+        <meta name="author" content="Urban Innovations" />
+		<meta name="robots" content="index, follow" />
 
-<script>
-document.getElementById('pw').addEventListener('keydown', function(e){
-  if(e.key === 'Enter') check();
-});
-function check(){
-  var pw = document.getElementById('pw').value;
-  if(pw === 'Urban-Innovations.comIsC0ol'){
-    sessionStorage.setItem('ui_preview_auth','1');
-    window.location.href = 'home.html';
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<link type="text/css" rel="stylesheet" href="urban-innovations_global.css?v=5" />
+<link type="text/css" rel="stylesheet" href="urban-innovations_home.css?v=5" />
+<script type="text/javascript" src="mn_nav.js"></script>
+<script type="text/javascript" src="global_rovr.js"></script>
+<script type="text/javascript" src="pop_daddy.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="cycle.js"></script>
+<script type="text/javascript" src="slideshow.js"></script>
+</head>
+
+<body onload="MM_preloadImages('images/home_act13.png','images/about_act13.png','images/about_opn13.png','images/about_ovr13.png','images/rent_act13.png','images/rent_opn13.png','images/rent_ovr13.png','images/conct_act13.png','images/conct_opn13.png','images/conct_ovr13.png')">
+
+<div id="_gate">
+  <div id="_gate_box">
+    <div id="_gate_brand">Urban Innovations</div>
+    <div id="_gate_line"></div>
+    <div id="_gate_title">Preview Access</div>
+    <div id="_gate_label">Enter password</div>
+    <input type="password" id="_gate_pw" placeholder="Password" autocomplete="off" />
+    <button id="_gate_btn" onclick="_gateCheck()">Enter</button>
+    <div id="_gate_err"></div>
+  </div>
+  <div id="_gate_foot">Confidential &mdash; Not for Distribution</div>
+</div>
+<script type="text/javascript">
+(function(){
+  var pw = document.getElementById('_gate_pw');
+  if(localStorage.getItem('ui_auth')==='1'){
+    document.getElementById('_gate').style.display='none';
+    document.documentElement.style.visibility='';
   } else {
-    document.getElementById('err').textContent = 'Incorrect password. Please try again.';
-    document.getElementById('pw').value = '';
-    document.getElementById('pw').focus();
+    document.documentElement.style.visibility='';
+    pw.focus();
+  }
+  pw.onkeydown = function(e){ if(e.keyCode===13) _gateCheck(); };
+})();
+function _gateCheck(){
+  var v = document.getElementById('_gate_pw').value;
+  if(v==='Urban-Innovations.comIsC0ol'){
+    localStorage.setItem('ui_auth','1');
+    document.getElementById('_gate').style.display='none';
+  } else {
+    document.getElementById('_gate_err').innerHTML='Incorrect password.';
+    document.getElementById('_gate_pw').value='';
+    document.getElementById('_gate_pw').focus();
   }
 }
 </script>
+
+<div id="wrapper">
+<!-- Header Content -->
+  <div id="header">
+  		<div id="logo_frame">
+  			<h1> Urban Innovations: Real Estate Development and Leasing </h1>
+  		</div>
+  		<div id="logo_main"></div>
+
+<!-- Navigation Bar -->	
+    <div id="navbar"><table border="0" cellpadding="0" cellspacing="0">
+  	<tr>
+
+    <td><img src="images/home_act13.png" alt="Welcome to Urban Innovations" name="home" width="69" height="26" border="0" id="home"   /></td>
+
+    <td><a href="about.html" target="_top" onclick="MM_nbGroup('down','group1','about','images/about_act13.png',1)" onmouseover="MM_nbGroup('over','about','images/about_ovr13.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/about_opn13.png" alt="About Urban innovations" name="about" width="105" height="26" border="0" id="about"   /></a></td>
+
+    <td><a href="rent.html" target="_top" onclick="MM_nbGroup('down','group1','rentingleasing','images/rent_act13.png',1)" onmouseover="MM_nbGroup('over','rentingleasing','images/rent_ovr13.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/rent_opn13.png" alt="Renting and Leasing" name="rentingleasing" width="151" height="26" border="0" id="rent"   /></a></td>
+
+    <td><a href="contact.html" target="_top" onclick="MM_nbGroup('down','group1','contact','images/conct_act13.png',1)" onmouseover="MM_nbGroup('over','contact','images/conct_ovr13.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/conct_opn13.png" alt="Contact Us" name="contact" width="84" height="26" border="0" id="contact"   /></a></td>
+    
+	</tr>
+	</table>
+    </div>
+<!-- End Navigation Bar -->
+    
+  	<div id="image_main"></div>
+   	<div id="welcome"><img src="images/mn_welcome.png" width="294" height="52" alt="Welcome to Urban Innovations" /></div>
+   	<div id="main_imgroll">
+    	<img src="images/mn_scndtext.jpg" width="284" height="250" alt="Investing in Calgary" />
+        <img src="images/mn_scndtext2.jpg" width="284" height="250" alt="Innovative investing in Calgary" />
+    	<img src="images/prop_scndimg.jpg" width="284" height="250" alt="Parkhill" />
+        <img src="images/mn_scndkilny.jpg" width="284" height="250" alt="Killarney" />        
+        <img src="images/mn_scndimg2.jpg" width="284" height="250" alt="Marda Loop" />
+        <img src="images/prop_scndbtwd.jpg" width="284" height="250" alt="Brentwood" />
+        <img src="images/prop_scndmont1.jpg" width="284" height="250" alt="Montgomery" />
+        </div>
+  </div>
+
+<!-- Main Content -->
+  <div id="main">
+	<div id="red_box">
+    	<h2> Real Estate Redevelopment</h2>
+        <p class="redtxt"> We redevelop</p>
+        <p class="cntnt"> strategically located under-performing properties in Calgary's inner city through restoration and new construction.</p>
+		<p class="cntnt"><a href="about.html">Learn About Redevelopment</a></p>
+	</div>
+    <div id="red_hdng"></div>
+    <div id="red_icon"><a href="about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mn_red','','images/mn_redrovr.png',1)"><img src="images/mn_red.png" alt="Real Estate Redevelopment" name="mn_red" width="187" height="115" border="0" id="mn_red" /></a>
+    </div>
+    
+<div id="rnt_box">
+      <h2> Renting and Leasing</h2>
+      <p class="rnttxt"> We lease</p>
+      <p class="cntnt"> well managed multi-family residential and commercial properties in popular locations within Calgary's inner city.</p>
+		<p class="cntnt"><a href="rent.html">Renting + Leasing Information</a></p>
+	</div>
+    <div id="rnt_hdng"></div>
+    <div id="rnt_icon"><a href="rent.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('mn_rnt','','images/mn_rntrovr.png',1)"><img src="images/mn_rnt.png" alt="Renting and Leasing" name="mn_rnt" width="123" height="120" border="0" id="mn_rnt" /></a>
+    </div>
+    
+  </div>
+
+<!-- Footer Content -->
+	<div id="footer">
+		<div id="cntctbx">
+        	<script language="javascript" type="text/javascript">
+			  <!--
+				  var one = "mail";
+				  var two = "urban-innovations.com";
+				  var anchortext = one + "@" + two;
+				  var mailpart1 = "mail";
+				  var mailpart2 = "urban-innovations.com";
+
+				  document.write("<a href=" + "mail" + "to:" + mailpart1 + "@" + mailpart2 + ">" + anchortext + "</a>")
+			  //-->
+			</script>
+  		</div>
+
+  		<div id="cntctrovr"><a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('cntcticon','','images/cntctrovr.png',1)"><img src="images/cntcticon.png" alt="Contact" name="cntcticon" width="52" height="42" border="0" id="cntcticon" /></a>
+  		</div>
+
+ 	<div id="footerbar">
+  		<ul class="footul">
+			<li class="footslsh">//</li>
+			<li class="footli"><a href="about.html">about us</a></li>
+			<li class="footslsh">//</li>
+      		<li class="footli"><a href="rent.html">renting+leasing</a></li>
+			<li class="footslsh">//</li>
+			<li class="footli"><a href="contact.html">contact</a></li>
+			<li class="footslsh">//</li>
+        	<li class="footli"><a href="invest.html" onclick="popmoney(this.href); return false;">investment opportunities</a></li>
+			<li class="footslsh">//</li>
+        	<li class="footli"><a href="sitemap.html">site map</a></li>
+			<li class="footslsh">//</li>
+ 		</ul>
+  		<p class="divtxt">*Urban Innovations is a division of 1572597 Alberta Ltd.</p>
+	</div>
+
+	<div id="copyright">
+  		<img src="images/copyright.png" width="154" height="28" alt="Copyright 2010, Urban Innovations" />
+ 	</div>
+  </div>
+
+</div>
 </body>
 </html>
