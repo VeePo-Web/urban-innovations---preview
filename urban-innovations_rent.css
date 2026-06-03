@@ -80,8 +80,10 @@ min-height: 650px;
 	background-repeat: no-repeat;
 }
 #image_main {
-	background-image: url(images/rnt_mnimg.jpg);
+	background-image: url(images/IMG_5606.jpg);
 	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	margin: 0px;
 	padding: 0px;
 	height: 250px;
