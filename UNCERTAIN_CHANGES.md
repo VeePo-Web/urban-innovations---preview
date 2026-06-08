@@ -27,12 +27,14 @@ Confirm each one and let me know if the call was right or needs adjusting.
 
 ---
 
-### 3. Hero image area — Brentwood only
-**What I did:** Removed the Marda Loop sign image (`prop_scndmdlp.jpg`) from the sidebar slideshow (`#rnt_imgroll`).
+### 3. Hero image area — Brentwood only ✅ RESOLVED
+**What I did:** Removed the Marda Loop sign image (`prop_scndmdlp.jpg`) from the sidebar slideshow (`#rnt_imgroll`), and swapped the steady `#image_main` CSS background from `IMG_5606.jpg` (Eau Claire building, was mislabeled as Parkhill) to `IMAG0756.jpg` — the Brentwood photo the client confirmed by name.
 
-**Why uncertain:** The annotation said "only use the Brentwood picture to appear here" with an arrow pointing at the full top image area. The main hero image (`#image_main`) is set via CSS as a background — it may already be the Brentwood property photo, or it could be a different image entirely. I only edited the slideshow, not the CSS background.
+Also corrected two mislabeled rotating slideshow images and added the client's two requested photos to the rotation:
+- `IMG_2679.jpg` — was tagged "Eau Claire Historic Building" but actually shows the downtown penthouse condo (unit circled in blue); re-labeled `alt="Downtown Calgary Penthouse Condo"`
+- `IMG_5606.jpg` (now freed from the hero slot) — added to the rotation as `alt="Eau Claire Historic Building"`, replacing the stray duplicate Brentwood sign image (`IMAG0756.jpg` was previously miscategorized here too)
 
-**Confirm:** Does the main hero image at the top of rent.html look correct (Brentwood property), or does the CSS background image also need replacing?
+**Resolution:** Steady left frame = Brentwood (`IMAG0756.jpg`, confirmed by client). Rotating slideshow on the right now correctly includes the downtown penthouse condo and the old Eau Claire landmark building, with no duplicate of the Brentwood photo in rotation.
 
 ---
 
