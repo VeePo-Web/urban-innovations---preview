@@ -24,7 +24,7 @@ body{
 }
 #header {
 	background-color: #000;
-	background-image: url(images/bkgd_top_cnct.png);
+	background-image: url(images/bkgd_top_ab.png);
 	background-repeat: no-repeat;
 	padding: 0px;
 	height: 337px;
@@ -72,18 +72,32 @@ body{
 	background-image: url(images/mn_logo.png);
 	background-repeat: no-repeat;
 }
+#image_main {
+	background-image: url(images/cnct_imgday.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0px;
+	padding: 0px;
+	height: 250px;
+	width: 566px;
+	position: absolute;
+	z-index: 10;
+	left: 87px;
+	top: 80px;
+}
 #cnct_imgroll {
 	margin: 0px;
 	padding: 0px;
-	height: 264px;
-	width: 443px;
+	height: 250px;
+	width: 284px;
 	position: absolute;
-	left: 381px;
-	top: 73px;
+	left: 653px;
+	top: 80px;
 }
 #cnct_imgroll img {
-	width: 443px;
-	height: 264px;
+	width: 284px;
+	height: 250px;
 	object-fit: cover;
 }
 
