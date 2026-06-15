@@ -105,6 +105,11 @@ min-height: 323px;
 	left: 653px;
 	top: 80px;
 }
+#main_imgroll img {
+	width: 284px;
+	height: 250px;
+	object-fit: cover;
+}
 
 /* MAIN — two-column 50/50 layout, 300px boxes with equal 83px gaps */
 #red_box {
@@ -166,7 +171,7 @@ min-height: 323px;
 }
 /* FOOTER */
 #cntctbx {
-	background-image: url(images/cntctbx.png);
+	background-image: url(images/cntctbx.png?v=2);
 	background-repeat: no-repeat;
 	margin: 0px;
 	height: 45px;

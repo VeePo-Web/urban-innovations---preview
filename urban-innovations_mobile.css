@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* ============================================================
+   Urban Innovations — Mobile / Responsive layer
+   Loaded LAST on every page. Desktop (>=1024px) is untouched.
+   Everything below reflows the fixed 1024px absolute layout
+   into a clean, legible, touch-friendly single column.
+   ============================================================ */
+
+@media (max-width: 1023px) {
+
+  /* ---- Base ---- */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #111 !important;
+    background-image: none !important;
+  }
+
+  /* Containers become fluid, drop fixed heights + 1024 bg art */
+  #wrapper, #prop_wrapper {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    background: #111 !important;
+    background-image: none !important;
+  }
+
+  #header, #ab_header,
+  #main, #prop_main,
+  #footer, #prop_footer {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    background-image: none !important;
+  }
+
+  /* Header band: dark. Main content card: white. Footer: dark. */
+  #header, #ab_header { background: #2b2b2b !important; padding: 0 0 18px !important; }
+  #main, #prop_main   { background: #ffffff !important; padding: 26px 20px 34px !important; }
+  #footer, #prop_footer { background: #1a1a1a !important; padding: 26px 20px 30px !important; }
+
+  /* Neutralise every absolutely-positioned child → normal flow */
+  #header > div, #ab_header > div,
+  #main > div, #prop_main > div,
+  #footer > div, #prop_footer > div {
+    position: static !important;
+    left: auto !important; top: auto !important; right: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 0 14px 0 !important;
+    z-index: auto !important;
+  }
+
+  /* ---- Logo + frame ---- */
+  #logo_frame { display: none !important; }   /* grey backing block, not needed */
+  #header #logo_main, #header #logo_ab, #ab_header #logo_rnt {
+    display: block !important;
+    width: 220px !important;
+    height: 80px !important;
+    margin: 16px auto 12px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+  }
+
+  /* ---- Navigation (image-button table) ----
+     Collapse the table so cells wrap; all four buttons stay visible
+     (centered, wrapping to two rows on narrow phones) with large taps. */
+  #navbar { margin: 4px auto 6px !important; }
+  #navbar table, #navbar tbody, #navbar tr {
+    display: block !important;
+    width: auto !important;
+    margin: 0 auto !important;
+  }
+  #navbar tr { text-align: center !important; }
+  #navbar td {
+    display: inline-block !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+  }
+  #navbar a {
+    display: inline-block !important;
+    padding: 11px 10px !important;          /* enlarge tap target */
+  }
+  #navbar img, #navbar td img {
+    height: 26px !important;
+    width: auto !important;
+    display: block !important;
+  }
+
+  /* ---- Hero images (steady panel + rotating slideshow) ----
+     Selectors carry the parent id so they out-rank the generic
+     "#header > div { height:auto }" child-reset above. */
+  #header #image_main, #ab_header #image_box, #ab_header #image_scnd {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    height: 200px !important;
+    margin: 10px auto !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    overflow: hidden !important;
+    border-radius: 4px !important;
+  }
+  #header #main_imgroll, #header #ab_imgroll,
+  #header #rnt_imgroll, #header #cnct_imgroll {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    height: 200px !important;
+    margin: 10px auto !important;
+    overflow: hidden !important;
+    border-radius: 4px !important;
+  }
+  #header #main_imgroll img, #header #ab_imgroll img, #header #rnt_imgroll img,
+  #header #cnct_imgroll img, #ab_header #image_box img, #ab_header #image_scnd img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    position: absolute !important;
+    top: 0 !important; left: 0 !important;
+  }
+  #welcome { display: none !important; }   /* "welcome." graphic — redundant on mobile */
+
+  /* ---- Main content typography ---- */
+  #main h2, #prop_main h2 { color: #222 !important; font-size: 20px !important; line-height: 1.25 !important; margin: 6px 0 4px !important; }
+  .cntnt, .cxtxt, .features, .subfeatures, .subsubfeat, .subsubsub, .navlist {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+  .redtxt, .rnttxt, .randytxt, .abtxt { font-size: 13px !important; }
+  .mixdhead1, .mixdhead2, .mixdhead3, .mixdhead4 { font-size: 17px !important; line-height: 1.3 !important; }
+
+  /* Decorative PNG title-bars: hide (real <h2>/text now carries the heading) */
+  #red_hdng, #rnt_hdng, #randy_hdng, #ab_hdng, #rnt_title { display: none !important; }
+
+  /* Decorative content icons → centered, modest */
+  #red_icon, #rnt_icon { text-align: center !important; margin: 4px auto 18px !important; }
+  #red_icon img, #rnt_icon img { width: auto !important; max-width: 140px !important; height: auto !important; display: inline-block !important; }
+
+  /* Boxes that had fixed heights */
+  #red_box, #rnt_box, #wide_box, #rescom_box, #cnctcall, #cnctinfo { width: auto !important; }
+
+  /* ---- Contact page specifics ---- */
+  #cnct_hdng {
+    display: block !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: contain !important;
+    height: 22px !important;
+    margin-bottom: 14px !important;
+  }
+  #cnctlink { text-align: left !important; }
+  #cnctlink img { width: 52px !important; height: 42px !important; }
+  #appbox_cnct { background-size: contain !important; min-height: 70px !important; }
+
+  /* Rent page application buttons + commercial app icon */
+  #rescom_app { display: none !important; }
+  #resapp_box, #comapp_box { margin: 6px 0 !important; }
+  #resapp_box img, #comapp_box img { width: 140px !important; height: auto !important; }
+  #interac { text-align: center !important; }
+  #interac img { max-width: 100% !important; height: auto !important; }
+
+  /* ---- Property pages: stack the dense grid ---- */
+  #prop_txtbox { width: auto !important; }
+  #prop_iconbox { margin: 4px 0 16px !important; }
+  #prop_iconbox img { width: auto !important; height: auto !important; }
+  #prop_navhdng { margin-top: 10px !important; }
+  #prop_navlist { margin: 6px 0 14px !important; }
+  #prop_navlist .navlist li { padding: 6px 0 !important; font-size: 15px !important; }
+  #prop_nxtbtns, #prop_prvbtns, #prop_bkbtns {
+    display: inline-block !important;
+    margin: 0 10px 12px 0 !important;
+  }
+  #prop_nxtbtns img, #prop_prvbtns img, #prop_bkbtns img { height: 34px !important; width: auto !important; }
+  #prop_appbox { margin: 10px 0 18px !important; }
+  #prop_appbox img { max-width: 100% !important; height: auto !important; }
+  #prop_hdngbox { margin-bottom: 8px !important; }
+  #prop_streetv { margin: 8px 0 !important; }
+  #prop_streetv img { height: 45px !important; width: auto !important; }
+  #googlemap_box {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 280px !important;
+    overflow: hidden !important;
+    margin: 8px 0 18px !important;
+  }
+  #googlemap_box iframe { width: 100% !important; height: 280px !important; }
+  #prop_cntctbx { font-size: 14px !important; line-height: 1.6 !important; color: #555 !important; }
+  #prop_cntctbx a { color: #aa710a !important; }
+  #prop_cntctrovr img { width: 52px !important; height: 42px !important; }
+
+  /* ---- Contact box image (address + phone) in footers ---- */
+  #cntctbx {
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: contain !important;
+    min-height: 48px !important;
+    padding: 0 !important;
+  }
+  #cntctrovr img { width: 52px !important; height: 42px !important; }
+  #green img { max-width: 100% !important; height: auto !important; }
+
+  /* ---- Footer: the previously "lost" bottom text ---- */
+  #footerbar, #prop_ftrbar {
+    width: auto !important;
+    padding: 8px 0 0 !important;
+    text-align: center !important;
+  }
+  .footul { text-align: center !important; padding: 0 !important; line-height: 2.4 !important; }
+  .footli, .footslsh { font-size: 14px !important; line-height: 2.4 !important; }
+  .footli a { padding: 6px 4px !important; }
+  #footer a, #prop_ftrbar a { color: #dcdcdc !important; }
+  .footslsh { color: #777 !important; }
+  .divtxt {
+    color: #aaa !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    padding-top: 16px !important;
+  }
+  #copyright, #prop_cyrght {
+    text-align: center !important;
+    margin: 14px auto 0 !important;
+  }
+  #copyright img, #prop_cyrght img { display: inline-block !important; width: 154px !important; height: 28px !important; }
+
+}
+
+/* Landscape phones: keep the same single-column reflow, just a touch wider hero */
+@media (max-width: 1023px) and (orientation: landscape) {
+  #header #image_main, #ab_header #image_box, #ab_header #image_scnd,
+  #header #main_imgroll, #header #ab_imgroll,
+  #header #rnt_imgroll, #header #cnct_imgroll {
+    max-width: 640px !important;
+    height: 240px !important;
+  }
+}

@@ -156,7 +156,7 @@ body
 }
 
 #cntctbx {
-	background-image: url(images/cntctbx.png);
+	background-image: url(images/cntctbx.png?v=2);
 	background-repeat: no-repeat;
 	margin: 0px;
 	height: 45px;

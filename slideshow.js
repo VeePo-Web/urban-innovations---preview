@@ -11,7 +11,8 @@ $(function() {
 });
 
 $(function() {
-    $('#ab_imgroll').cycle();
+    /* About page only — a bit faster than the 4000ms default */
+    $('#ab_imgroll').cycle({ timeout: 2500 });
 });
 
 $(function() {
