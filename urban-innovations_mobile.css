@@ -9,8 +9,11 @@
 @media (max-width: 1023px) {
 
   /* ---- Base ---- */
+  /* border-box so width:100% + padding never exceeds the viewport (no right-edge clip) */
+  #wrapper, #wrapper *, #prop_wrapper, #prop_wrapper * { box-sizing: border-box !important; }
   html, body {
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     background: #111 !important;
     background-image: none !important;
@@ -209,15 +212,34 @@
   #cntctrovr img { width: 52px !important; height: 42px !important; }
   #green img { max-width: 100% !important; height: auto !important; }
 
-  /* ---- Footer: the previously "lost" bottom text ---- */
+  /* ---- Footer: the previously "lost" bottom text ----
+     Flex-wrap the link row so it ALWAYS centers and wraps cleanly —
+     never clips a link off the right edge on any width. */
   #footerbar, #prop_ftrbar {
     width: auto !important;
+    max-width: 100% !important;
     padding: 8px 0 0 !important;
     text-align: center !important;
+    box-sizing: border-box !important;
   }
-  .footul { text-align: center !important; padding: 0 !important; line-height: 2.4 !important; }
-  .footli, .footslsh { font-size: 14px !important; line-height: 2.4 !important; }
-  .footli a { padding: 6px 4px !important; }
+  .footul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2px 7px !important;
+    text-align: center !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+  .footli, .footslsh {
+    display: inline-block !important;
+    white-space: nowrap !important;     /* keep each label (e.g. "site map") intact */
+    font-size: 14px !important;
+    line-height: 2.2 !important;
+  }
+  .footli a { padding: 6px 2px !important; }
   #footer a, #prop_ftrbar a { color: #dcdcdc !important; }
   .footslsh { color: #777 !important; }
   .divtxt {
