@@ -171,11 +171,40 @@
     animation: ui-scrollcue 1.7s ease-in-out infinite !important;
     pointer-events: none !important;
   }
-  /* Hide the redundant second image on mobile (desktop, ≥1024px, keeps both) */
-  #header #main_imgroll, #header #ab_imgroll,
-  #header #rnt_imgroll, #header #cnct_imgroll,
+  /* Property pages have a 2nd steady photo (not a slideshow) — keep one hero */
   #ab_header #image_scnd { display: none !important; }
   #welcome { display: none !important; }   /* "welcome." graphic — redundant on mobile */
+
+  /* ---- Rotating slideshow → a spotlit gallery card BELOW the full-screen hero.
+     The div was moved just outside #header (still pixel-identical on desktop),
+     so on mobile it flows in after the hero as its own section. The card uses
+     the slides' native 284:250 ratio so nothing is cropped. ---- */
+  #wrapper > #main_imgroll, #wrapper > #ab_imgroll,
+  #wrapper > #rnt_imgroll, #wrapper > #cnct_imgroll {
+    display: block !important;
+    position: relative !important;
+    left: auto !important; top: auto !important; right: auto !important;
+    width: calc(100% - 40px) !important;
+    max-width: 420px !important;
+    height: auto !important;
+    aspect-ratio: 284 / 250 !important;
+    margin: 28px auto !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background: #000 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.30) !important;
+    z-index: auto !important;
+  }
+  #wrapper > #main_imgroll img, #wrapper > #ab_imgroll img,
+  #wrapper > #rnt_imgroll img, #wrapper > #cnct_imgroll img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 0 !important; left: 0 !important;
+    border-radius: 10px !important;
+  }
 
   /* About hero: subject (Randy) sits far-left in a wide photo — anchor the
      tall mobile crop to him instead of the empty sky on the right. */
