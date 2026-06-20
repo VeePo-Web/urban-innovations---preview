@@ -40,8 +40,18 @@
     background-image: none !important;
   }
 
-  /* Header band: dark. Main content card: white. Footer: dark. */
-  #header, #ab_header { background: #2b2b2b !important; padding: 0 !important; }
+  /* Header band: dark. Main content card: white. Footer: dark.
+     The header fills the WHOLE first screen (logo + nav + hero), so no content
+     peeks above the fold — the hero owns the opening view. Flex column lets the
+     hero grow to fill whatever height remains under the logo/nav. */
+  #header, #ab_header {
+    background: #2b2b2b !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;   /* fallback */
+    min-height: 100svh !important;  /* no URL-bar jump on modern mobile */
+  }
   #main, #prop_main   { background: #ffffff !important; padding: 26px 20px 34px !important; }
   #footer, #prop_footer { background: #1a1a1a !important; padding: 26px 20px 30px !important; }
 
@@ -111,7 +121,9 @@
     position: relative !important;
     width: 100% !important;
     max-width: none !important;
-    height: clamp(320px, 56vh, 460px) !important;
+    flex: 1 1 auto !important;             /* fill the screen below logo + nav */
+    height: auto !important;
+    min-height: 240px !important;
     margin: 0 !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -164,6 +176,10 @@
   #header #rnt_imgroll, #header #cnct_imgroll,
   #ab_header #image_scnd { display: none !important; }
   #welcome { display: none !important; }   /* "welcome." graphic — redundant on mobile */
+
+  /* About hero: subject (Randy) sits far-left in a wide photo — anchor the
+     tall mobile crop to him instead of the empty sky on the right. */
+  .page-about #header #image_main { background-position: left center !important; }
 
   /* ---- Main content typography ---- */
   #main h2, #prop_main h2 { color: #222 !important; font-size: 20px !important; line-height: 1.25 !important; margin: 6px 0 4px !important; }
@@ -297,11 +313,11 @@
   50%      { transform: translateX(-50%) translateY(7px); }
 }
 
-/* Landscape phones are short — shrink the hero so the cue stays above the fold */
+/* Landscape phones are short — let the hero shrink (flex handles fill) so the
+   logo + nav + hero still fit one screen without an oversized min-height. */
 @media (max-width: 1023px) and (orientation: landscape) {
   #header #image_main, #ab_header #image_box {
-    height: 64vh !important;
-    min-height: 220px !important;
+    min-height: 160px !important;
   }
 }
 
