@@ -41,7 +41,7 @@
   }
 
   /* Header band: dark. Main content card: white. Footer: dark. */
-  #header, #ab_header { background: #2b2b2b !important; padding: 0 0 18px !important; }
+  #header, #ab_header { background: #2b2b2b !important; padding: 0 !important; }
   #main, #prop_main   { background: #ffffff !important; padding: 26px 20px 34px !important; }
   #footer, #prop_footer { background: #1a1a1a !important; padding: 26px 20px 30px !important; }
 
@@ -56,14 +56,22 @@
     margin: 0 0 14px 0 !important;
     z-index: auto !important;
   }
+  /* Also flatten NESTED absolutely-positioned elements so none escape to the
+     top of the page (e.g. contact application box, property listing icon).
+     The hero re-establishes its own positioning below at higher specificity. */
+  #header *, #ab_header *,
+  #main *, #prop_main *,
+  #footer *, #prop_footer * {
+    position: static !important;
+  }
 
   /* ---- Logo + frame ---- */
   #logo_frame { display: none !important; }   /* grey backing block, not needed */
   #header #logo_main, #header #logo_ab, #ab_header #logo_rnt {
     display: block !important;
-    width: 220px !important;
-    height: 80px !important;
-    margin: 16px auto 12px !important;
+    width: 210px !important;
+    height: 72px !important;
+    margin: 16px auto 6px !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: contain !important;
@@ -72,7 +80,7 @@
   /* ---- Navigation (image-button table) ----
      Collapse the table so cells wrap; all four buttons stay visible
      (centered, wrapping to two rows on narrow phones) with large taps. */
-  #navbar { margin: 4px auto 6px !important; }
+  #navbar { margin: 2px auto 12px !important; }
   #navbar table, #navbar tbody, #navbar tr {
     display: block !important;
     width: auto !important;
@@ -94,43 +102,67 @@
     display: block !important;
   }
 
-  /* ---- Hero images (steady panel + rotating slideshow) ----
-     Selectors carry the parent id so they out-rank the generic
-     "#header > div { height:auto }" child-reset above. */
-  #header #image_main, #ab_header #image_box, #ab_header #image_scnd {
+  /* ---- HERO: one commanding, full-bleed signature image + scroll cue ----
+     The steady #image_main / #image_box becomes THE hero. The redundant
+     second image (rotating slideshow / #image_scnd) is hidden on mobile so
+     the fold reads as one intentional photo — never two clipped cards. */
+  #header #image_main, #ab_header #image_box {
     display: block !important;
     position: relative !important;
     width: 100% !important;
-    max-width: 520px !important;
-    height: 200px !important;
-    margin: 10px auto !important;
+    max-width: none !important;
+    height: clamp(320px, 56vh, 460px) !important;
+    margin: 0 !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
     overflow: hidden !important;
-    border-radius: 4px !important;
+    border-radius: 0 !important;          /* full-bleed, no floating-card look */
   }
-  #header #main_imgroll, #header #ab_imgroll,
-  #header #rnt_imgroll, #header #cnct_imgroll {
-    position: relative !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: 520px !important;
-    height: 200px !important;
-    margin: 10px auto !important;
-    overflow: hidden !important;
-    border-radius: 4px !important;
-  }
-  #header #main_imgroll img, #header #ab_imgroll img, #header #rnt_imgroll img,
-  #header #cnct_imgroll img, #ab_header #image_box img, #ab_header #image_scnd img {
+  #ab_header #image_box img {
     width: 100% !important;
     height: 100% !important;
     max-width: 100% !important;
     object-fit: cover !important;
-    border-radius: 4px !important;
+    border-radius: 0 !important;
     position: absolute !important;
     top: 0 !important; left: 0 !important;
   }
+  /* cinematic top+bottom vignette — adds depth, seats the scroll cue, and
+     masks any baked-in artifact at the image edges */
+  #header #image_main::after, #ab_header #image_box::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important; right: 0 !important; top: 0 !important; bottom: 0 !important;
+    background: linear-gradient(to bottom,
+      rgba(0,0,0,0.45) 0%,
+      rgba(0,0,0,0) 26%,
+      rgba(0,0,0,0) 56%,
+      rgba(0,0,0,0.62) 100%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+  }
+  /* animated "scroll" cue at the hero's bottom-center */
+  #header #image_main::before, #ab_header #image_box::before {
+    content: 'SCROLL' !important;
+    position: absolute !important;
+    left: 50% !important; bottom: 15px !important;
+    transform: translateX(-50%) !important;
+    color: #fff !important;
+    font: 700 10px/1 Arial, Helvetica, sans-serif !important;
+    letter-spacing: 2.5px !important;
+    padding-top: 24px !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat top center !important;
+    background-size: 22px 22px !important;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.55) !important;
+    z-index: 2 !important;
+    animation: ui-scrollcue 1.7s ease-in-out infinite !important;
+    pointer-events: none !important;
+  }
+  /* Hide the redundant second image on mobile (desktop, ≥1024px, keeps both) */
+  #header #main_imgroll, #header #ab_imgroll,
+  #header #rnt_imgroll, #header #cnct_imgroll,
+  #ab_header #image_scnd { display: none !important; }
   #welcome { display: none !important; }   /* "welcome." graphic — redundant on mobile */
 
   /* ---- Main content typography ---- */
@@ -163,7 +195,10 @@
   }
   #cnctlink { text-align: left !important; }
   #cnctlink img { width: 52px !important; height: 42px !important; }
-  #appbox_cnct { background-size: contain !important; min-height: 70px !important; }
+  /* Contact application box: drop the desktop box graphic, stack the two links */
+  #appbox_cnct { background: none !important; min-height: 0 !important; }
+  #appbox_cnct #apprnt_cnct, #appbox_cnct #applse_cnct { margin: 0 0 8px 0 !important; }
+  #appbox_cnct img { max-width: 100% !important; height: auto !important; }
 
   /* Rent page application buttons + commercial app icon */
   #rescom_app { display: none !important; }
@@ -256,12 +291,21 @@
 
 }
 
-/* Landscape phones: keep the same single-column reflow, just a touch wider hero */
+/* Scroll-cue bounce (keeps the translateX centering while nudging Y) */
+@keyframes ui-scrollcue {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(7px); }
+}
+
+/* Landscape phones are short — shrink the hero so the cue stays above the fold */
 @media (max-width: 1023px) and (orientation: landscape) {
-  #header #image_main, #ab_header #image_box, #ab_header #image_scnd,
-  #header #main_imgroll, #header #ab_imgroll,
-  #header #rnt_imgroll, #header #cnct_imgroll {
-    max-width: 640px !important;
-    height: 240px !important;
+  #header #image_main, #ab_header #image_box {
+    height: 64vh !important;
+    min-height: 220px !important;
   }
+}
+
+/* Respect reduced-motion: hold the scroll cue still */
+@media (max-width: 1023px) and (prefers-reduced-motion: reduce) {
+  #header #image_main::before, #ab_header #image_box::before { animation: none !important; }
 }

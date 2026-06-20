@@ -83,7 +83,7 @@ body
 }
 
 #image_main {
-	background-image: url(images/ab_mnimg.jpg);
+	background-image: url(images/ab_mnimg.jpg?v=2);
 	background-repeat: no-repeat;
 	margin: 0px;
 	padding: 0px;
