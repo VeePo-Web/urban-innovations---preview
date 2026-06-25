@@ -206,9 +206,13 @@
     border-radius: 10px !important;
   }
 
-  /* About hero: subject (Randy) sits far-left in a wide photo — anchor the
-     tall mobile crop to him instead of the empty sky on the right. */
-  .page-about #header #image_main { background-position: left center !important; }
+  /* About hero on mobile: use the HIGH-RES original (a crisp portrait crop of
+     Randy) instead of enlarging the small 566x250 desktop composite — fixes the
+     soft/low-quality look on phones. Desktop (>=1024px) keeps ab_mnimg.jpg. */
+  .page-about #header #image_main {
+    background-image: url(images/randy-mobile.jpg?v=1) !important;
+    background-position: center center !important;
+  }
 
   /* ---- Main content typography ---- */
   #main h2, #prop_main h2 { color: #222 !important; font-size: 20px !important; line-height: 1.25 !important; margin: 6px 0 4px !important; }
